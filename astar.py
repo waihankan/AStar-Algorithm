@@ -5,9 +5,10 @@ WIDTH = 600
 
 icon = pygame.image.load(("path.png"))
 window = pygame.display.set_mode((WIDTH, WIDTH))
+window.set_alpha(None)
 pygame.display.set_caption("A* Path Finding Algorithm")
 pygame.display.set_icon(icon)
-
+clock = pygame.time.Clock()
 LIGHT_BLUE = (75, 180, 250)
 BLUE = (45, 124, 250)
 WHITE = (255, 255, 255)
@@ -185,12 +186,11 @@ def get_clicked_pos(pos, rows, width):
     return row, col
 
 def main(win, width):
-    ROWS = 50
+    ROWS = 40
     grid = make_grid(ROWS, width)
     
     start = None
     end = None
-
     run = True
 
     while run:
@@ -198,7 +198,6 @@ def main(win, width):
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 run = False
-
 
             if pygame.mouse.get_pressed()[0]:
                 pos = pygame.mouse.get_pos()
@@ -208,7 +207,7 @@ def main(win, width):
                     start = spot
                     start.make_start()
 
-                elif not end:
+                elif not end and spot != start:
                     end = spot
                     end.make_end() 
 
@@ -236,6 +235,8 @@ def main(win, width):
                     start = None
                     end = None
                     grid = make_grid(ROWS, width)
+
+            clock.tick(60)
 
     pygame.quit()
 
