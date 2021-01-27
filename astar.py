@@ -2,21 +2,20 @@ import pygame
 import math
 from queue import PriorityQueue
 WIDTH = 600
+
 icon = pygame.image.load(("path.png"))
 window = pygame.display.set_mode((WIDTH, WIDTH))
 pygame.display.set_caption("A* Path Finding Algorithm")
 pygame.display.set_icon(icon)
 
-RED = (255, 0, 0)
-GREEN = (0, 255, 0)
-BLUE = (0, 0, 255)
-YELLOW = (255, 255, 0)
+LIGHT_BLUE = (75, 206, 250)
+BLUE = (2, 169, 224)
 WHITE = (255, 255, 255)
-BLACK = (0, 0, 0)
-PURPLE = (128, 0 , 128)
-ORANGE = (255, 165, 0)
-GREY = (128, 128, 128)
-TURQUOISE = (0, 255, 255)
+BLACK = (60, 60, 60)
+YELLOW = (255, 250, 0)
+RED = (232, 0, 0)
+GREY = (219, 219, 219)
+PURPLE = (144, 0, 240)
 
 class Spot:
     def __init__(self, row, col, width, total_rows):
@@ -33,40 +32,40 @@ class Spot:
         return self.row, self.col
 
     def is_closed(self):
-        return self.color == RED
+        return self.color == LIGHT_BLUE
 
     def is_barrier(self):
         return self.color == BLACK
 
     def is_open(self):
-        return self.color == GREEN
+        return self.color == BLUE
 
     def is_start(self):
-        return self.color == ORANGE
+        return self.color == RED
 
     def is_end(self):
-        return self.color == TURQUOISE
+        return self.color == PURPLE
 
     def reset(self):
         self.color = WHITE
 
     def make_closed(self):
-        self.color = RED
+        self.color = LIGHT_BLUE
     
     def make_open(self):
-        self.color = GREEN
+        self.color = BLUE
 
     def make_barrier(self):
         self.color = BLACK
 
     def make_start(self):
-        self.color = ORANGE
+        self.color = RED
 
     def make_end(self):
-        self.color = TURQUOISE
+        self.color = PURPLE
 
     def make_path(self):
-        self.color = PURPLE
+        self.color = YELLOW
 
     def draw(self, win):
         pygame.draw.rect(win, self.color, (self.x, self.y, self.width, self.width))
@@ -125,8 +124,9 @@ def algorithm(draw, grid, start, end):
         open_set_hash.remove(current)
 
         if current == end:
-            reconstruct_path(came_from, end, draw)
+            reconstruct_path(came_from, end, draw)            
             end.make_end()
+            start.make_start()
             return True
 
         for neighbor in current.neighbors:
