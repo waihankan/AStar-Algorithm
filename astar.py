@@ -2,9 +2,10 @@ import pygame
 import math
 from queue import PriorityQueue
 WIDTH = 600
-
+icon = pygame.image.load(("path.png"))
 window = pygame.display.set_mode((WIDTH, WIDTH))
 pygame.display.set_caption("A* Path Finding Algorithm")
+pygame.display.set_icon(icon)
 
 RED = (255, 0, 0)
 GREEN = (0, 255, 0)
