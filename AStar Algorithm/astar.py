@@ -1,6 +1,7 @@
 import pygame
 import math
-from queue import PriorityQueue
+import numpy as np
+from Queue import PriorityQueue
 WIDTH = 600
 
 icon = pygame.image.load(("path.png"))
@@ -101,6 +102,7 @@ def reconstruct_path(came_from, current, draw):
 def h(p1, p2):
     (x1, y1) = p1
     (x2, y2) = p2
+    
     # Calculate Manhattan distance
     return abs(x2-x1) + abs(y2-y1)
 
@@ -158,7 +160,6 @@ def make_grid(rows, width):
         for col in range(rows):
             spot = Spot(row, col, gap, rows)
             grid[row].append(spot)
-
     return grid
 
 def draw_grid(win, rows, width):
