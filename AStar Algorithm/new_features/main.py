@@ -223,6 +223,7 @@ def astar(start, goal, grid):
         open_set_hash.remove(current)
 
         if current == goal:
+            goal.make_end()
             path_length = reconstruct_path(came_from, current, path_length)
             goal.make_end()
             start.make_start()
