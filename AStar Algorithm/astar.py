@@ -1,7 +1,7 @@
 import pygame
 import math
 import numpy as np
-from Queue import PriorityQueue
+from queue import PriorityQueue
 WIDTH = 600
 
 icon = pygame.image.load(("path.png"))
