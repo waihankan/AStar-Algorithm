@@ -1,2 +1,0 @@
-## Astar algorithm
-
