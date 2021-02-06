@@ -219,6 +219,12 @@ def astar(start, goal, grid):
     f_score[start] = heuristic(start.get_pos(), goal.get_pos())
 
     while not open_set.empty():
+        
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                break
+
         current = open_set.get()[2]
         open_set_hash.remove(current)
 
@@ -290,18 +296,17 @@ def main(width, height, num_rows, num_cols):
                 row, col = get_clicked_pos(
                     pos, num_rows, num_cols, WIDTH, HEIGHT)
                 node = grid[row, col]
-                if not node.is_free():
-                    node.reset()
-                    if node == start:
-                        start = None
-                        print("reset start point")
+                node.reset()
+                if node == start:
+                    start = None
+                    print("reset start point")
 
-                    elif node == end:
-                        end = None
-                        print("reset goal point")
+                elif node == end:
+                    end = None
+                    print("reset goal point")
 
-                    else:
-                        print("reset badrrier")
+                else:
+                    print("reset barrier")
 
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_ESCAPE:
