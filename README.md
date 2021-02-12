@@ -17,13 +17,16 @@
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
 
+
+<img align ="center" src= "image/logo.png" width="1500" height="250">
+
+
 [![MIT License][license-shield]](https://opensource.org/licenses/MIT)
+[![Contributors][contributors-shield]][contributors-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![Forks][forks-shield]][forks-url]
 [![LinkedIn][linkedin-shield]](https://www.linkedin.com/in/wai-han-692305174/)
-
-## Demos
-**Here is a demo picture of the software.**
-
-<img align="center" src="demo/demo1.png" width = 400>
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
@@ -41,7 +44,12 @@
         <li><a href="#prerequisites">Prerequisites</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
+    <li>
+      <a href="#usage">Usage</a>
+      <ul>
+        <li><a href="#demo">Demo</a></li>
+      </ul>
+    </li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -68,6 +76,7 @@
 
 * [Python](https://www.python.org)
 * [Pygame](https://www.pygame.org)
+* [Easygui](https://pypi.org/project/easygui)
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -80,7 +89,7 @@ To get a local copy up and running follow these simple example steps.
 
 ```pip install numpy```
 
-```pip install python-tk```
+```pip install easygui```
 
 <!-- USAGE EXAMPLES -->
 
@@ -89,6 +98,11 @@ To get a local copy up and running follow these simple example steps.
 As the current source code mainly focuses on visualization, it is a great idea for people who are learning path finding algorithm, such as [A*](https://en.wikipedia.org/wiki/A*_search_algorithm), [Dijkstra's](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm) etc... **Visualizing** is one of the great techniques for learning. You can play around with the code and understand the core idea of what a *path finding algorithm* is.
 
 Unfortunately as of right now, the only possible method is A* algortihm.
+
+#### Demo
+**Here is a demo picture of the software.**
+
+<img align="center" src="demo/demo1.png" width = 370 hspace=50> <img align="center" src="demo/demo2.png" width=370>
 
 
 
@@ -111,7 +125,6 @@ Contributions are what make the open source community such an amazing place to b
 Distributed under the MIT License. See `LICENSE` for more information.
 
 
-
 <!-- CONTACT -->
 ## Contact
 
@@ -120,25 +133,25 @@ Email -> wh.kankan13@gmail.com
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
+* [Astar Algortithm](https://en.wikipedia.org/wiki/A*_search_algorithm)
+* [Dijkstra's Algortihm](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm)
 * [Tech with Tim](https://www.youtube.com/channel/UC4JX40jDee_tINbkjycV4Sg)
 * [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
 * [Choose an Open Source License](https://choosealicense.com)
 * [README Template](https://github.com/othneildrew/Best-README-Template/blob/master/README.md)
-* [Astar Algortithm](https://en.wikipedia.org/wiki/A*_search_algorithm)
-* [Dijkstra's Algortihm](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm)
+
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/waihankan/AStar-Algorithm.svg?style=for-the-badge
+[contributors-url]: https://github.com/waihankan/AStar-Algorithm/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/waihankan/AStar-Algorithm.svg?style=for-the-badge
+[forks-url]: https://github.com/waihankan/AStar-Algorithm/network/members
+[stars-shield]: https://img.shields.io/github/stars/waihankan/AStar-Algorithm.svg?style=for-the-badge
+[stars-url]: https://github.com/waihankan/AStar-Algorithm/stargazers
+[issues-shield]: https://img.shields.io/github/issues/waihankan/AStar-Algorithm.svg?style=for-the-badge
+[issues-url]: https://github.com/waihankan/AStar-Algorithm/issues
+[license-shield]: https://img.shields.io/github/license/waihankan/AStar-Algorithm.svg?style=for-the-badge
+[license-url]: https://github.com/waihankan/AStar-Algorithm/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
-[product-screenshot]: images/screenshot.png
+[linkedin-url]: https://www.linkedin.com/in/wai-han-692305174/
