@@ -20,6 +20,10 @@
 [![MIT License][license-shield]](https://opensource.org/licenses/MIT)
 [![LinkedIn][linkedin-shield]](https://www.linkedin.com/in/wai-han-692305174/)
 
+## Demos
+**Here is a demo picture of the software.**
+
+<img align="center" src="demo/demo1.png" width = 400>
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
