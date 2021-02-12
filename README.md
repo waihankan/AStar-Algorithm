@@ -99,7 +99,7 @@ Contributions are what make the open source community such an amazing place to b
 5. Open a Pull Request
 
 ### Note
-*If you consider contributing to the project, I'd like to request you to implement the Dijkstra's algorithm firstly.
+*If you consider contributing to the project, I'd like to request you to implement the Dijkstra's algorithm firstly.*
 
 <!-- LICENSE -->
 ## License
@@ -116,7 +116,7 @@ Email -> wh.kankan13@gmail.com
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
-* [Tech with Time](https://www.youtube.com/channel/UC4JX40jDee_tINbkjycV4Sg)
+* [Tech with Tim](https://www.youtube.com/channel/UC4JX40jDee_tINbkjycV4Sg)
 * [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
 * [Choose an Open Source License](https://choosealicense.com)
 * [README Template](https://github.com/othneildrew/Best-README-Template/blob/master/README.md)
